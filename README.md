@@ -1,2 +1,5 @@
 # inter-vlan-defense-lab
-Configure VLANS across a network and implement quality security controls to defend from attacks.
+
+This project demonstrates how VLAN segmentation, inter-VLAN routing controls, and ACL enforcement can reduce lateral movement inside an enterprise network.
+
+This lab simulates an attacker attempting to move between VLANs and demonstrates how ACLs and secure switch configurations mitigate unauthorized communication.
