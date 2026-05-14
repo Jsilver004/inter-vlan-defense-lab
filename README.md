@@ -30,7 +30,7 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
  # Lab Setup
 
  - Creation of VLANS 10(HR), 20(Finance), 30(IT), and 40(Sales) and assigning them ports (Gi/0/1-4)
-   | VLAN | Deptartment | Gateway | SVI
+   | VLAN | Deptartment | Gateway |
    |---|---|---|
    | 10 | HR | 10.10.10.1 |
    | 20 | Finance | 10.10.20.1 |
