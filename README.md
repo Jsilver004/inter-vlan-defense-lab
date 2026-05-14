@@ -4,7 +4,7 @@ This project demonstrates how VLAN segmentation, inter-VLAN routing controls, an
 
 This lab simulates an attacker attempting to move between VLANs and demonstrates how ACLs and secure switch configurations mitigate unauthorized communication.
 
-## Objectives
+# Objectives
 
 - Configure VLAN segmentation on a Layer 3 Cisco switch
 - Enable and test inter-VLAN routing
@@ -13,7 +13,7 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
 - Mitigate VLAN hopping risks
 - Validate segmentation effectiveness through testing
 
-# Tools/Technologies
+## 1.Tools/Technologies
 
 - Cisco Layer 3 Switch
 - PuTTy
@@ -25,11 +25,13 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
 - VLANs
 - InterVLAN Routing
 
- # Network Topology
+ ## Network Topology
 
- # Lab Setup
+ ## Lab Setup
 
  - Creation of VLANS 10(HR), 20(Finance), 30(IT), and 40(Sales) and assigning them ports (Gi/0/1-4)
+
+### VLAN/Port Configurations
 
    | VLAN | Deptartment | Gateway | SVI Port |
    |---|---|---|---|
@@ -47,3 +49,31 @@ The following actions were performed during setup:
 5.  Configured a trunk port for VLAN traffic across a single physical port
 6.  Accessing the ports via "switchport mode access" and "switchport vlan x" to assign ports to VLANS
 
+### Host Configurations
+
+Two Windows hosts were configured with static IPs for connectivity tests.
+
+Configurations:
+
+   | Device | VLAN | IP address | 
+   |---|---|---|---|
+   | PC 1 | VLAN 10 | 10.10.10.10 | 
+   | PC 2 | VLAN 10 | 10.10.10.11 |
+
+and:
+   | Device | VLAN | IP address | 
+   |---|---|---|---|
+   | PC 1 | VLAN 10 | 10.10.10.10 | 
+   | PC 2 | VLAN 39 | 10.10.30.1 |
+
+Testing demonstrated:
+- Devices could successfully ping their own VLAN Gateways
+- Devices in separate VLANs could NOT communicate after ACL enforcement
+
+Detailed switch configurations and ACL rules are located in /config.
+
+### Attack (IP)
+
+## 7. VLAN Hopping Protection
+
+In addition to restricting inter-VLAN comminucation through ACL enforcement, the lab also addresses VLAN hopping risks caused by inseucre switch port configurations.
