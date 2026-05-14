@@ -24,3 +24,10 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
 - ACLs
 - VLANs
 - InterVLAN Routing
+
+ # Network Topology
+
+ # Lab Setup
+
+ - Creation of VLANS 10(HR), 20(Finance), 30(IT), and 40(Finances) and assigning them ports (Gi/0/1-4)
+ - 
