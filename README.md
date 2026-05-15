@@ -77,3 +77,30 @@ Detailed switch configurations and ACL rules are located in /config.
 ## 7. VLAN Hopping Protection
 
 In addition to restricting inter-VLAN comminucation through ACL enforcement, the lab also addresses VLAN hopping risks caused by inseucre switch port configurations.
+
+### VLAN Hopping Risks
+
+Switch ports that are configured using dynamic trunking mode can negiotate trunk connects through Dynamic Trunking Protocol (DTP). This introduces a security risk, as an attacker may attempt to form an unahtorized trunk connection to gain access to other VLANs.
+
+A misconfigured switch port may allow:
+- Unauthorized VLAN access
+- Traffic sniffing across VLANs
+- Lateral movement between departments
+- Expansion of attack surfaces
+
+### Insecure Configuration
+
+To mitigate this risk, the following protections were implemented:
+- Disabled Dynamic Trunking Protocol (DTP)
+- Force the port into access mode
+- Restrict the port to a single VLAN
+- Prevent unauthorized trunk negiotation
+
+Example:
+ switchport mode access
+ switchport access vlan 10
+ switchport non-negotiate
+
+Security Impact: By forcing the port into static access mode and disabling DTP negiotation, unauthorized trunk formation was prevented: This mitigates the chances of VLAN hopping attacks and strengthens network segmentation by ensuring devices can only access their assigned VLAN.
+
+Validation: Testing confirmed unauthorized VLAN access through trunk negotiation was no longer possible after secure port configurations were applied.
