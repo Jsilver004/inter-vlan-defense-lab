@@ -56,13 +56,13 @@ Two Windows hosts were configured with static IPs for connectivity tests.
 Configurations:
 
    | Device | VLAN | IP address | 
-   |---|---|---|---|
+   |---|---|---|
    | PC 1 | VLAN 10 | 10.10.10.10 | 
    | PC 2 | VLAN 10 | 10.10.10.11 |
 
 and:
    | Device | VLAN | IP address | 
-   |---|---|---|---|
+   |---|---|---|
    | PC 1 | VLAN 10 | 10.10.10.10 | 
    | PC 2 | VLAN 39 | 10.10.30.1 |
 
