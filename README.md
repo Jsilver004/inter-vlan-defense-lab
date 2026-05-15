@@ -64,7 +64,7 @@ and:
    | Device | VLAN | IP address | 
    |---|---|---|
    | PC 1 | VLAN 10 | 10.10.10.10 | 
-   | PC 2 | VLAN 39 | 10.10.30.1 |
+   | PC 2 | VLAN 30 | 10.10.30.1 |
 
 Testing demonstrated:
 - Devices could successfully ping their own VLAN Gateways
