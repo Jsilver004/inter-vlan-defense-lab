@@ -104,3 +104,29 @@ Example:
 Security Impact: By forcing the port into static access mode and disabling DTP negiotation, unauthorized trunk formation was prevented: This mitigates the chances of VLAN hopping attacks and strengthens network segmentation by ensuring devices can only access their assigned VLAN.
 
 Validation: Testing confirmed unauthorized VLAN access through trunk negotiation was no longer possible after secure port configurations were applied.
+
+## 8. Lesson Learned
+
+This project demonstrated how improper network segmentation can expose an enterprise environment to lateral movement attacks and unauthorized internal access between departments.
+
+Several important security concepts were reinforced through this lab:
+
+1. Enabling inter-VLAN routing without restriction creates significant security risks
+2. VLAN segmentation alone is not sufficient without proper ACL enforcement
+3. Access control lists (ACLs) are critical for limiting communication between departments
+4. Dynamic trunk negotiation can introduced VLAN hopping opportunities if left enabled
+5. Proper switchport configurations reduce the risk of unauthorized VLAN access
+6. Windows Defender Firewall can interfere with testing if ICMP rules are not configured properly
+7. Testing connectivity before and after security changes is essential for validating mitigation effectiveness
+
+This attack simulation demonstrated that devices in separate VLANs were initially able to communicate freely due to the unrestricted routing. After ACL enforcement, unauthorized communication between VLANs was successfully blocked, significantly reducing opportunities for lateral movement.
+
+This project also improved practical experience with:
+- Cisco L3 switch configuration
+- VLAN/SVI deployment
+- Kali Linux networking
+- ACL implementation
+- Enterprise network troubleshooting
+- Security-focused network design
+
+Overall this lab reinforced the importance of layered network defenses and demonstrated how proper segmentation and switch security configurations can reduce internal attacm sjrfaces in enterprise environments.
