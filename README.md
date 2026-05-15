@@ -4,7 +4,7 @@ This project demonstrates how VLAN segmentation, inter-VLAN routing controls, an
 
 This lab simulates an attacker attempting to move between VLANs and demonstrates how ACLs and secure switch configurations mitigate unauthorized communication.
 
-# Objectives
+# 1. Objectives
 
 - Configure VLAN segmentation on a Layer 3 Cisco switch
 - Enable and test inter-VLAN routing
@@ -13,7 +13,7 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
 - Mitigate VLAN hopping risks
 - Validate segmentation effectiveness through testing
 
-## 1.Tools/Technologies
+## 2.Tools/Technologies
 
 - Cisco Layer 3 Switch
 - PuTTy
@@ -25,9 +25,9 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
 - VLANs
 - InterVLAN Routing
 
- ## Network Topology
+ ## 3. Network Topology
 
- ## Lab Setup
+ ## 4. Lab Setup
 
  - Creation of VLANS 10(HR), 20(Finance), 30(IT), and 40(Sales) and assigning them ports (Gi/0/1-4)
 
@@ -49,7 +49,7 @@ The following actions were performed during setup:
 5.  Configured a trunk port for VLAN traffic across a single physical port
 6.  Accessing the ports via "switchport mode access" and "switchport vlan x" to assign ports to VLANS
 
-### Host Configurations
+### 5. Host Configurations
 
 Two Windows hosts were configured with static IPs for connectivity tests.
 
@@ -72,7 +72,7 @@ Testing demonstrated:
 
 Detailed switch configurations and ACL rules are located in /config.
 
-### Attack (IP)
+### 6. Attack (IP)
 
 ## 7. VLAN Hopping Protection
 
