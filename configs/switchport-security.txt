@@ -1,1 +1,26 @@
+enable
+configure terminal
 
+interfact gigabitEthernet1/0/1
+  switchport mode access ##only used as an access port
+  switchport access vlan 10 ## used for VLAN 10 traffic only
+  switchport nonenogiate ## disables DTP that can be used to form unauthorized trunks
+  spanning-tree portfast ##prevents switching loops
+
+interfact gigabitEthernet1/0/2
+  switchport mode access 
+  switchport access vlan 20
+  switchport nonenogiate
+  spanning-tree portfast
+
+interfact gigabitEthernet1/0/3
+  switchport mode access 
+  switchport access vlan 30
+  switchport nonenogiate
+  spanning-tree portfast
+
+interfact gigabitEthernet1/0/4
+  switchport mode access 
+  switchport access vlan 40
+  switchport nonenogiate
+  spanning-tree portfast
