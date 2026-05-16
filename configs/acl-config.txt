@@ -1,1 +1,11 @@
+enable
+configure terminal
 
+access-list 100 deny ip 10.10.10.0 0.0.0.255 10.10.10.20.0 0.0.0.255 
+
+access list 100 permit any any
+
+interface vlan 10
+  ip access-group 100 in
+
+##VLAN 10 cannot communication with VLAN 20. All other traffic permitted.
