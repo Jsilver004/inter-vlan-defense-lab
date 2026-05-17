@@ -70,5 +70,8 @@ Also a successful connection to the gateway.
 
 ![VLAN Creation](Images/VM-Connectivity-Test-(V20).png))
 
+Now the Attacker Machine (VLAN 10) will try to communicate with the Target Machine (VLAN 20).
 
+![VLAN Creation](Images/Attack1-(V10-20)S.png))
 
+It was a success. This should not happen and is a security issue.
