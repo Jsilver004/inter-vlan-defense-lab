@@ -5,8 +5,10 @@ The following screenshot shows the VLAN configuration on the Layer 3 switch afte
 enable
 configure terminal
 
+![VLAN Creation](Images/IP-Routing.png)
 ![VLAN Creation](Images/VLAN-Creation.png)
 
+IP Routing is enabled to allow the L3 Switch to act as a router.
 VLAN overview:
 
 ![VLAN Creation](Images/VLAN-Overview.png)
@@ -75,3 +77,16 @@ Now the Attacker Machine (VLAN 10) will try to communicate with the Target Machi
 ![VLAN Creation](Images/Attack1-(V10-20)S.png))
 
 It was a success. This should not happen and is a security issue.
+
+To mitigate this, we will apply an ACL to prevent routing from VLAN 10 to VLAN 20:
+
+![VLAN Creation](Images/ACL-Implementation.png))
+
+Then apply it to VLAN 10.
+
+![VLAN Creation](Images/ACL-Implementation-(2).png))
+
+
+
+
+
