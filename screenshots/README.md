@@ -61,11 +61,10 @@ Then tested for connectivity to the gateway
 Success.
 
 Next, setting up the attacker system:
-
-  sudo ip addr flush dev eth0
-  sudo ip addr add 10.10.20.50/24 dev eth0
-  sudo ip link set eth0 up
-  sudo ip route add default via 10.10.20.1 dev eth0
+- sudo ip addr flush dev eth0
+- sudo ip addr add 10.10.20.50/24 dev eth0
+- sudo ip link set eth0 up
+- sudo ip route add default via 10.10.20.1 dev eth0
 
 Also a successful connection to the gateway.
 
