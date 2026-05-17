@@ -9,5 +9,8 @@ configure terminal
 
 VLAN overview:
 
+![VLAN Creation](Images/VLAN-Overview.png)
 
+Then the SVIs must be created and configured to prevent outside traffic.
 
+![VLAN Creation](Images/SVI-Config.png)
