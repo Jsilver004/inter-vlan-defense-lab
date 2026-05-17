@@ -49,27 +49,27 @@ Vice versa for Device 1.
 # Attack Simulation
 
 In a Kali Linux VM, the follow commands were run for the target system:
-sudo ip addr flush dev eth0 (clears all old configs for interface)
-sudo ip addr add 10.10.10.50/24 dev eth0 (Assigns IP to device to eth0)
-sudo ip link set eth0 up (Turns interface eth0 on)
-sudo ip route add default via 10.10.10.1 dev eth0 (establishes 10.10.10.1 as the gateway)
+  sudo ip addr flush dev eth0 (clears all old configs for interface)
+  sudo ip addr add 10.10.10.50/24 dev eth0 (Assigns IP to device to eth0)
+  sudo ip link set eth0 up (Turns interface eth0 on)
+  sudo ip route add default via 10.10.10.1 dev eth0 (establishes 10.10.10.1 as the gateway)
 
 Then tested for connectivity to the gateway
 
-![VLAN Creation](Images/VM-Connectivity-Test-(V10)).png)
+![VLAN Creation](Images/VM-Connectivity-Test-(V10).png))
 
 Success.
 
 Next, setting up the attacker system:
 
-sudo ip addr flush dev eth0
-sudo ip addr add 10.10.20.50/24 dev eth0
-sudo ip link set eth0 up
-sudo ip route add default via 10.10.20.1 dev eth0
+  sudo ip addr flush dev eth0
+  sudo ip addr add 10.10.20.50/24 dev eth0
+  sudo ip link set eth0 up
+  sudo ip route add default via 10.10.20.1 dev eth0
 
 Also a successful connection to the gateway.
 
-![VLAN Creation](Images/VM-Connectivity-Test-(V20)).png)
+![VLAN Creation](Images/VM-Connectivity-Test-(V20).png))
 
 
 
