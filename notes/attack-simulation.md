@@ -58,4 +58,39 @@ The ACL denied communication from VLAN 10 to VLAN 20 while permitting other auth
 
   access-list 100 deny ip 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255
   access-list 100 permit ip any any
+
+Then applied to VLAN 10.
+
+  interface vlan 10
+  ip access-group 100 in
+
+## Post-ACL Test
+So when the ping request was sent again:
+
+  ping 10.10.20.50
+
+The ping failed.
+
+The attacker could no longer communicate directly with VLAN 20 devices.
+
+This confirms that ACL enforcement effectively restricted unauthorized inter-VLAN communication and reduced opportunities for lateral movement.
+
+# Validation
+
+| Test | Result |
+| --- | --- |
+| VLAN 10 -> Vlan 20 Pre-ACL | Successful |
+| VLAN 10 -> Vlan 20 Post-ACL | Failed |
+| VLAN Gateway Communication | Successful |
+| Same-VLAN communication | Successful |
+
+The results demonstrated that segmentation controls significantly improves network security while preserving legitimate VLAN functionality.
+
+# Key Takeaways
+This simulation reinforced several important network security concepts:
+- Vlan segmentation alone is not sufficient without ACL enforcement
+- Inter-VLAN routing should follow least-privilege principles
+- ACLs help reduce lateral movement opportunities
+- Internal network segmentation is critical for enterprise defense
+- Security controls should be validated through testing as opposed to assumed security
   
