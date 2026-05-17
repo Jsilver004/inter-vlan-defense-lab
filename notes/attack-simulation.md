@@ -52,4 +52,10 @@ If an attacker compromises a workstation inside one department, they may be able
 Although VLANs logically separate broadcast domains, they do not automatically prevent routed communication between VLANs when L3 routing is enabled
 
 # ACL Enforcement
-To mitigate this risk
+To mitigate this risk, an ACL was configured and applied to VLAN 10.
+
+The ACL denied communication from VLAN 10 to VLAN 20 while permitting other authorized traffic. 
+
+  access-list 100 deny ip 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255
+  access-list 100 permit ip any any
+  
