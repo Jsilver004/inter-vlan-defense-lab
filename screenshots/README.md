@@ -29,7 +29,7 @@ First the changes to the attacker machine settings:
 (PC 2 is set to 10.10.10.11)
 Then a ping test. I set VLAN 10 to use both Port 6 and 1 to see if devices in the same VLAN can communicate with each other.
 
-![VLAN Creation](Images/(1)-VLAN-Connectivity-Test)
+![VLAN Creation](Images/VLAN-Creation.png)
 
 From Machine 2 -> 1:
 
