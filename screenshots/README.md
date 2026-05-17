@@ -86,6 +86,25 @@ Then apply it to VLAN 10.
 
 ![VLAN Creation](Images/ACL-Implementation-(2).png))
 
+After ACL implementation, the attacker can no longer reach the target.
+
+![VLAN Creation](Images/Attack1-(V10-20)F.png))
+
+# VLAN Hopping Preventation
+
+The following are settings that an insecure network will have:
+
+![VLAN Creation](VLAN-Hopping-Defense-Config))
+
+Dynamic Trunk Protocol (DTP) is enabled, which means that an attacker can negotiate trunk ports and give them access to communicate with other VLANs.
+
+To prevent this, we 1. disable autonegotiate mode and 2. set the port to access mode only:
+
+![VLAN Creation](VLAN-Hopping-Defense-Config-(2)))
+
+This prevents a common attacks vector for VLAN Hopping Attacks that can compromise a network.
+
+
 
 
 
