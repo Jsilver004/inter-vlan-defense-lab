@@ -5,7 +5,7 @@ The following screenshot shows the VLAN configuration on the Layer 3 switch afte
 enable
 configure terminal
 
-![VLAN Creation](VLAN-Creation.png)
+![VLAN Creation](Images/VLAN-Creation.png)
 
 VLAN overview:
 
