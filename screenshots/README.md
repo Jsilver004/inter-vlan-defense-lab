@@ -43,6 +43,7 @@ Device 2 can ping its SVI (10.10.30.1) but not VLAN 10's (10.10.10.1) or Device 
 ![VLAN Creation](Images/(2)-VLAN-Connectivity-Test.png)
 
 Vice versa for Device 1.
+
 ![VLAN Creation](Images/(2)-VLAN-Connectivity-Test-(2).png)
 
 
