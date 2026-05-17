@@ -14,3 +14,9 @@ VLAN overview:
 Then the SVIs must be created and configured to prevent outside traffic.
 
 ![VLAN Creation](Images/SVI-Config.png)
+![VLAN Creation](Images/SVI-Config-(2).png)
+![VLAN Creation](Images/SVI-Config-(3).png)
+
+An overview of all the interfaces:
+
+![VLAN Creation](Images/Interface-Overview.png)
