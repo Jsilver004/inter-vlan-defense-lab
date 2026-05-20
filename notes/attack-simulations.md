@@ -1,5 +1,7 @@
 # Attack Simulation
 
+# 1. Inter-VLAN insecurity
+
 ## Objective
 
 The purpose of this attack was to see if systems located in separate VLANs could communication freely across the network and to evaluate the segmentation controls properly restrict lateral movement
@@ -8,7 +10,7 @@ The simulated modeled a scenario in which an attacker compromises a host in one 
 
 ---
 
-# Setup
+## Setup
 
 Two Kali Linux VMs were configured to simulate attacker and target systems inside different VLANs.
 
@@ -26,7 +28,7 @@ sudo ip route add default via 10.10.10.1 dev eth0 (Sets 10.10.10.1 as the defaul
 
 Target VM was configured similarly, but using VLAN 20 as the subnet and gateway (10.10.20.1)
 
-# Initial Attack Test
+## Initial Attack Test
 
 Attack system in VLAN 10 attempted to communicate with the target system in VLAN 20
 
@@ -40,7 +42,7 @@ This demonstrated that unrestricted inter-VLAN routing allowed direct communicat
 
 Because no ACL restriction had been applied yet, the L3 switch routed traffic freely between VLANs.
 
-# Security Risk
+## Security Risk
 
 This behavior represents a major security weakness in an enterprise environment
 
@@ -51,7 +53,7 @@ If an attacker compromises a workstation inside one department, they may be able
 - run ransomware programs
 Although VLANs logically separate broadcast domains, they do not automatically prevent routed communication between VLANs when L3 routing is enabled
 
-# ACL Enforcement
+## ACL Enforcement
 To mitigate this risk, an ACL was configured and applied to VLAN 10.
 
 The ACL denied communication from VLAN 10 to VLAN 20 while permitting other authorized traffic. 
@@ -75,7 +77,7 @@ The attacker could no longer communicate directly with VLAN 20 devices.
 
 This confirms that ACL enforcement effectively restricted unauthorized inter-VLAN communication and reduced opportunities for lateral movement.
 
-# Validation
+## Validation
 
 | Test | Result |
 | --- | --- |
@@ -86,7 +88,7 @@ This confirms that ACL enforcement effectively restricted unauthorized inter-VLA
 
 The results demonstrated that segmentation controls significantly improves network security while preserving legitimate VLAN functionality.
 
-# Key Takeaways
+## Key Takeaways
 This simulation reinforced several important network security concepts:
 - Vlan segmentation alone is not sufficient without ACL enforcement
 - Inter-VLAN routing should follow least-privilege principles
@@ -94,3 +96,13 @@ This simulation reinforced several important network security concepts:
 - Internal network segmentation is critical for enterprise defense
 - Security controls should be validated through testing as opposed to assumed security
   
+# 2. Layer 2 Reconaissance
+
+## Objective
+Analyze how inproper use of protocols can be observed by an attacker through packet captures and used to conive avenues to break into a network and compromise it's systems.
+
+## Set up
+
+A Kali linux VM was configured with the following:
+
+![VLAN Creation](Images/Attacker-Setup.png)
