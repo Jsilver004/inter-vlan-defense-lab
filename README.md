@@ -13,7 +13,7 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
 - Mitigate VLAN hopping risks
 - Validate segmentation effectiveness through testing
 
-## 2.Tools/Technologies
+# 2.Tools/Technologies
 
 - Cisco Layer 3 Switch
 - PuTTy
@@ -25,13 +25,13 @@ This lab simulates an attacker attempting to move between VLANs and demonstrates
 - VLANs
 - InterVLAN Routing
 
- ## 3. Network Topology
+ # 3. Network Topology
 
- ## 4. Lab Setup
+ # 4. Lab Setup
 
  - Creation of VLANS 10(HR), 20(Finance), 30(IT), and 40(Sales) and assigning them ports (Gi/0/1-4)
 
-### VLAN/Port Configurations
+## VLAN/Port Configurations
 
    | VLAN | Deptartment | Gateway | SVI Port |
    |---|---|---|---|
@@ -49,7 +49,7 @@ The following actions were performed during setup:
 5.  Configured a trunk port for VLAN traffic across a single physical port
 6.  Accessing the ports via "switchport mode access" and "switchport vlan x" to assign ports to VLANS
 
-### 5. Host Configurations
+# 5. Host Configurations
 
 Two Windows hosts were configured with static IPs for connectivity tests.
 
@@ -72,9 +72,16 @@ Testing demonstrated:
 
 Detailed switch configurations and ACL rules are located in /config.
 
-### 6. Attack (IP)
+# 6. Attacks
 
-## 7. VLAN Hopping Protection
+## Passive Layer 2 Reconaissance
+
+Wireshark used to observe Layer 2 switching protocols including STP, CDP and DTP traffic from an intentionally insecure switchport configuration.
+
+The captured traffic demonstrated how discovery and negotiation protocols can expose enterprise switching behavior and potentially VLAN hopping risks.
+
+
+### 7. VLAN Hopping Protection
 
 In addition to restricting inter-VLAN comminucation through ACL enforcement, the lab also addresses VLAN hopping risks caused by inseucre switch port configurations.
 
