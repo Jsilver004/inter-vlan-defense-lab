@@ -105,4 +105,6 @@ Analyze how inproper use of protocols can be observed by an attacker through pac
 
 A Kali linux VM was configured with the following:
 
+
+![VLAN Creation](./screenshots/Images/(2)-VLAN-Connectivity-Test.png)
 ![VLAN Creation](./screenshots/Images/Attacker-Setup.png)
