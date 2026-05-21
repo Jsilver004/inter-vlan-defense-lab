@@ -10,7 +10,11 @@ The simulated modeled a scenario in which an attacker compromises a host in one 
 
 ---
 
-## Setup
+# Setup
+
+## Switch
+
+
 
 Two Kali Linux VMs were configured to simulate attacker and target systems inside different VLANs.
 
@@ -96,13 +100,5 @@ This simulation reinforced several important network security concepts:
 - Internal network segmentation is critical for enterprise defense
 - Security controls should be validated through testing as opposed to assumed security
   
-# 2. Layer 2 Reconaissance
-
-## Objective
-Analyze how inproper use of protocols can be observed by an attacker through packet captures and used to conive avenues to break into a network and compromise it's systems.
-
-## Set up
-
-A Kali linux VM was configured with the following:
 
 ![VLAN Creation](../screenshots/Images/Attacker-Setup.png)
