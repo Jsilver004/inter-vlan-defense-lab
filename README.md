@@ -74,14 +74,14 @@ Detailed switch configurations and ACL rules are located in /config.
 
 # 6. Attacks
 
-## Passive Layer 2 Reconaissance
+### Passive Layer 2 Reconaissance
 
 Wireshark used to observe Layer 2 switching protocols including STP, CDP and DTP traffic from an intentionally insecure switchport configuration.
 
 The captured traffic demonstrated how discovery and negotiation protocols can expose enterprise switching behavior and potentially VLAN hopping risks.
 
 
-### 7. VLAN Hopping Protection
+### VLAN Hopping Protection
 
 In addition to restricting inter-VLAN comminucation through ACL enforcement, the lab also addresses VLAN hopping risks caused by inseucre switch port configurations.
 
