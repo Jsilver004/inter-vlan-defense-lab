@@ -23,8 +23,8 @@ Firstly, VLANs were set up on the L3 Switch as follows:
    | 30 | IT | 10.10.30.1 | Gi/0/3 |
    | 40 | Sales | 10.10.40.1 | Gi/0/4 |
 
-![VLAN Creation](../Screenshots/Images/IP-Routing.png)
-![VLAN Creation](../Screenshots/Images/VLAN-Creation.png)
+![VLAN Creation](../screenshots/Images/IP-Routing.png)
+![VLAN Creation](../screenshots/Images/VLAN-Creation.png)
 
 Two Kali Linux VMs were configured to simulate attacker and target systems inside different VLANs.
 
