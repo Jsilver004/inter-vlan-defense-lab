@@ -33,6 +33,18 @@ VLAN overview:
 
 ![VLAN Creation](../screenshots/Images/VLAN-Overview.png)
 
+The SVIs were also configured to create separation between VLANS.
+
+![VLAN Creation](../screenshots/Images/SVI-Config.png)
+![VLAN Creation](../screenshots/Images/SVI-Config-(2).png)
+![VLAN Creation](../screenshots/Images/SVI-Config-(3).png)
+
+An overview of all the interfaces:
+
+![VLAN Creation](../screenshots/Images/Interface-Overview.png)
+
+## Machines
+
 Two Kali Linux VMs were configured to simulate attacker and target systems inside different VLANs.
 
 | Device | VLAN | IP Address |
@@ -47,15 +59,19 @@ sudo ip addr add 10.10.10.50/24 dev eth0 (Sets the device to 10.10.10.50, belong
 sudo ip link set eth0 up (Activates interface)
 sudo ip route add default via 10.10.10.1 dev eth0 (Sets 10.10.10.1 as the default gateway)
 
+![VLAN Creation](../screenshots/Images/Attacker-Setup.png)
+
 Target VM was configured similarly, but using VLAN 20 as the subnet and gateway (10.10.20.1)
 
-## Initial Attack Test
+# Initial Attack Test
 
 Attack system in VLAN 10 attempted to communicate with the target system in VLAN 20
 
   ping 10.10.20.50
 
 ## Result
+
+![VLAN Creation](../screenshots/Images/Attack1-(V10-20)S.png))
 
 Successful ping.
 
@@ -74,18 +90,24 @@ If an attacker compromises a workstation inside one department, they may be able
 - run ransomware programs
 Although VLANs logically separate broadcast domains, they do not automatically prevent routed communication between VLANs when L3 routing is enabled
 
-## ACL Enforcement
+# ACL Enforcement
 To mitigate this risk, an ACL was configured and applied to VLAN 10.
 
 The ACL denied communication from VLAN 10 to VLAN 20 while permitting other authorized traffic. 
 
   access-list 100 deny ip 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255
   access-list 100 permit ip any any
+  
+  ![VLAN Creation](../screenshots/Images/ACL-Implementation.png))
 
+  
 Then applied to VLAN 10.
 
   interface vlan 10
   ip access-group 100 in
+
+   ![VLAN Creation](../screenshots/Images/ACL-Implementation-(2).png))
+
 
 ## Post-ACL Test
 So when the ping request was sent again:
