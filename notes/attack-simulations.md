@@ -14,7 +14,17 @@ The simulated modeled a scenario in which an attacker compromises a host in one 
 
 ## Switch
 
+Firstly, VLANs were set up on the L3 Switch as follows:
 
+   | VLAN | Deptartment | Gateway | SVI Port |
+   |---|---|---|---|
+   | 10 | HR | 10.10.10.1 | Gi/0/1 |
+   | 20 | Finance | 10.10.20.1 | Gi/0/2 |
+   | 30 | IT | 10.10.30.1 | Gi/0/3 |
+   | 40 | Sales | 10.10.40.1 | Gi/0/4 |
+
+![VLAN Creation](../Images/IP-Routing.png)
+![VLAN Creation](../Images/VLAN-Creation.png)
 
 Two Kali Linux VMs were configured to simulate attacker and target systems inside different VLANs.
 
