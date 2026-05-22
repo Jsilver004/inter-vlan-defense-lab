@@ -114,6 +114,8 @@ So when the ping request was sent again:
 
   ping 10.10.20.50
 
+![VLAN Creation](../screenshots/Images/Attack1-(V10-20)F.png))
+
 The ping failed.
 
 The attacker could no longer communicate directly with VLAN 20 devices.
