@@ -6,7 +6,7 @@ enable
 configure terminal
 
 ![VLAN Creation](Images/IP-Routing.png)
-![VLAN Creation](Images/VLAN-Creation.png)
+![VLAN Creatio](Images/VLAN-Creation.png)
 
 IP Routing is enabled to allow the L3 Switch to act as a router.
 VLAN overview:
