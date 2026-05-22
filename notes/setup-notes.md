@@ -6,8 +6,8 @@ The following screenshot shows the VLAN configuration on the Layer 3 switch afte
 enable
 configure terminal
 
-![VLAN Creation](../screenshot/Images/IP-Routing.png)
-![VLAN Creatio](../screenshot/Images/VLAN-Creation.png)
+![VLAN Creation](../screenshots/Images/IP-Routing.png)
+![VLAN Creatio](../screenshots/Images/VLAN-Creation.png)
 
 IP Routing is enabled to allow the L3 Switch to act as a router.
 VLAN overview:
