@@ -28,6 +28,11 @@ Firstly, VLANs were set up on the L3 Switch as follows:
 ![VLAN Creation](../screenshots/Images/VLAN-Creation.png)
 
 IP Routing is enabled to allow the L3 switch to act as a router.
+
+VLAN overview:
+
+![VLAN Creation](../screenshots/Images/VLAN-Overview.png)
+
 Two Kali Linux VMs were configured to simulate attacker and target systems inside different VLANs.
 
 | Device | VLAN | IP Address |
